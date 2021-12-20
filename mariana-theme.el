@@ -1,4 +1,4 @@
-;;; mariana-theme.el --- Color theme inspired by the Spacegray theme in Sublime Text  -*- lexical-binding:t -*-
+;;; mariana-theme.el --- Color theme inspired by the Mariana theme in Sublime Text 4 -*- lexical-binding:t -*-
 
 ;; Copyright (C) 2021 Jon Eskin
 
@@ -36,7 +36,7 @@
 ;; SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ;;; Commentary:
-;; Sourced other themes to get information about font faces for packages.
+;; Sourced other themes to get information about font faces> for packages.
 ;;
 ;; I. Installation
 ;;   A. Manual installation
@@ -44,24 +44,8 @@
 ;;     2. In your `~/.emacs.d/init.el' or `~/.emacs':
 ;;       (load-theme 'mariana t)
 ;;
-;;   B. From Melpa
-;;     1. M-x package-instal RET mariana-theme.el RET.
-;;     2. In your `~/.emacs.d/init.el' or `~/.emacs':
-;;       (load-theme 'mariana t)
-;;
-;;   C. With use-package
-;;     In your `~/.emacs.d/init.el' or `~/.emacs':
-;;       (use-package mariana-theme
-;;         :ensure t
-;;         :config
-;;         (load-theme 'mariana t))
 
 ;;; Code:
-
-(defgroup mariana-theme ()
-  :group 'faces
-  :prefix "mariana-")
-
 
 (deftheme mariana
   "Custom theme inspired by the Mariana theme in Sublime Text 4.")
