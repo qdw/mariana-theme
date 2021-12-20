@@ -1,0 +1,25 @@
+#+TITLE: mariana-theme
+#+AUTHOR: Jon Eskin
+#+DATE: [2021-12-20 Mon]
+#+LANGUAGE: en
+#+OPTIONS: d:t toc:nil num:nil
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="https://raw.githubusercontent.com/rougier/emacs-gtd/master/GTD.css" />
+#+KEYWORDS: theme mariana
+#+STARTUP: indent content
+
+Work in progress Emacs theme inspired the Mariana theme for Sublime Text 4. PR's welcome.
+
+* Screenshots
+#+html: <p align="center"><img src="img/mariana.png" width="100%"/></p>
+
+* Installation
+** Manual installation
+1. Download the [[https://raw.githubusercontent.com/jpe90/mariana-theme/master/mariana-theme.el][mariana theme file]]
+2. In your =~/.emacs.d/init.el= or =~/.emacs=:
+
+#+begin_src emacs-lisp
+  (load-theme 'mariana t)
+#+end_src
+
+* License
+MIT License
