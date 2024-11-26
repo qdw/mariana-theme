@@ -1576,6 +1576,7 @@
 
 ;;;; yasnippet
    `(yas-field-highlight-face ((,class (:foreground ,green :background ,mariana0 :weight bold))))
+))
 
 ;;;###autoload
 (when load-file-name
