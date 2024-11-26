@@ -108,7 +108,7 @@
    `(match ((,class (:foreground ,green :background ,mariana0 :weight bold))))
    `(minibuffer-prompt ((,class (:foreground ,teal))))
    `(nobreak-space ((,class (:background ,bg :foreground ,fg :underline nil))))
-   `(region ((,class (:background ,grey :foreground nil :distant-foreground ,bg :extend t))))
+   `(region ((,class (:background ,grey :foreground unspecified :distant-foreground ,bg :extend t))))
    `(secondary-selection ((,class (:background ,grey :extend t))))
    `(shadow ((,class (:foreground ,mariana5))))
    `(success ((,class (:foreground ,green))))
@@ -224,6 +224,32 @@
    `(annotate-annotation-secondary ((,class (:background ,green :foreground ,mariana5))))
    `(annotate-highlight ((,class (:background ,orange :underline ,orange))))
    `(annotate-highlight-secondary ((,class (:background ,green :underline ,green))))
+   
+;;;; ANSI colors (used in shell-mode)
+   
+   `(ansi-color-black ((t (:background ,bg :foreground ,bg :underline nil))))
+   `(ansi-color-bright-black ((t (:background ,bg :foreground ,bg :underline nil))))
+   
+   `(ansi-color-red ((t (:background ,orange :foreground ,orange :underline nil))))
+   `(ansi-color-bright-red ((t (:background ,orange :foreground ,orange :underline nil))))
+   
+   `(ansi-color-green ((t (:background ,mariana5 :foreground ,mariana5 :underline nil))))
+   `(ansi-color-bright-green ((t (:background ,mariana5  :foreground ,mariana5 :underline nil))))
+   
+   `(ansi-color-yellow ((t (:background ,purple :foreground ,purple :underline nil))))
+   `(ansi-color-bright-yellow ((t (:background ,yellow :foreground ,yellow :underline nil))))
+   
+   `(ansi-color-blue ((t (:background ,blue :foreground ,blue :underline nil))))
+   `(ansi-color-bright-blue ((t (:background ,blue :foreground ,blue :underline nil))))
+
+   `(ansi-color-magenta ((t (:background ,magenta :foreground ,magenta :underline nil))))
+   `(ansi-color-bright-magenta ((t (:background ,magenta :foreground ,magenta :underline nil))))
+
+   `(ansi-color-cyan ((t (:background ,cyan :foreground ,cyan :underline nil))))
+   `(ansi-color-bright-cyan ((t (:background ,lightcyan :foreground ,lightcyan :underline nil))))
+      
+   `(ansi-color-white ((t (:background ,fg :foreground ,fg :underline nil))))
+   `(ansi-color-bright-white ((t (:background ,fg :foreground ,fg :underline nil))))
 
 ;;;; anzu
    `(anzu-replace-highlight ((,class (:background ,mariana0 :foreground ,red :weight bold :strike-through t))))
@@ -299,15 +325,15 @@
    `(cfw:face-disable ((,class (:foreground ,grey))))
    `(cfw:face-grid ((,class (:foreground ,bg))))
    `(cfw:face-header ((,class (:foreground ,blue :weight bold))))
-   `(cfw:face-holiday ((,class (:foreground nil :background ,bg-other :weight bold))))
+   `(cfw:face-holiday ((,class (:foreground unspecified :background ,bg-other :weight bold))))
    `(cfw:face-periods ((,class (:foreground ,yellow))))
    `(cfw:face-saturday ((,class (:foreground ,red :weight bold))))
    `(cfw:face-select ((,class (:background ,grey))))
    `(cfw:face-sunday ((,class (:foreground ,red :weight bold))))
    `(cfw:face-title ((,class (:foreground ,blue :weight bold :height 2.0))))
-   `(cfw:face-today ((,class (:foreground nil :background nil :weight bold))))
+   `(cfw:face-today ((,class (:foreground unspecified :background unspecified :weight bold))))
    `(cfw:face-today-title ((,class (:foreground ,bg :background ,blue :weight bold))))
-   `(cfw:face-toolbar ((,class (:foreground nil :background nil))))
+   `(cfw:face-toolbar ((,class (:foreground unspecified :background unspecified))))
    `(cfw:face-toolbar-button-off ((,class (:foreground ,mariana6 :weight bold))))
    `(cfw:face-toolbar-button-on ((,class (:foreground ,blue :weight bold))))
 
@@ -491,7 +517,7 @@
    `(diredfl-write-priv ((,class (:foreground ,red))))
 
 ;;;; doom-modeline
-   `(doom-modeline-bar-inactive ((,class (:background nil))))
+   `(doom-modeline-bar-inactive ((,class (:background unspecified))))
    `(doom-modeline-eldoc-bar ((,class (:background ,green))))
 
 ;;;; ediff
@@ -581,13 +607,13 @@
    `(evil-search-highlight-persist-highlight-face ((,class (:background ,darkblue  :foreground ,mariana8 :distant-foreground ,mariana0 :weight bold))))
 
 ;;;; evil-googles
-   `(evil-goggles-default-face ((,class (:background ,grey :foreground nil :distant-foreground ,bg :extend t))))
+   `(evil-goggles-default-face ((,class (:background ,grey :foreground unspecified :distant-foreground ,bg :extend t))))
 
 ;;;; evil-mc
    `(evil-mc-cursor-bar-face ((,class (:height 1 :background ,purple :foreground ,mariana0))))
    `(evil-mc-cursor-default-face ((,class (:background ,purple :foreground ,mariana0 :inverse-video nil))))
    `(evil-mc-cursor-hbar-face ((,class (:underline (:color ,orange)))))
-   `(evil-mc-region-face ((,class (:background ,grey :foreground nil :distant-foreground ,bg :extend t))))
+   `(evil-mc-region-face ((,class (:background ,grey :foreground unspecified :distant-foreground ,bg :extend t))))
 
 ;;;; evil-snipe
    `(evil-snipe-first-match-face ((,class (:foreground ,orange :background ,darkblue :weight bold))))
@@ -710,7 +736,7 @@
 
 ;;;; goggles
    `(goggles-added ((,class (:background ,green))))
-   `(goggles-changed ((,class (:background ,grey :foreground nil :distant-foreground ,bg :extend t))))
+   `(goggles-changed ((,class (:background ,grey :foreground unspecified :distant-foreground ,bg :extend t))))
    `(goggles-removed ((,class (:background ,red :extend t))))
 
 ;;;; header-line
@@ -796,7 +822,7 @@
 
 ;;;; iedit
    `(iedit-occurrence ((,class (:foreground ,purple :weight bold :inverse-video t))))
-   `(iedit-read-only-occurrence ((,class (:background ,grey :foreground nil :distant-foreground ,bg :extend t))))
+   `(iedit-read-only-occurrence ((,class (:background ,grey :foreground unspecified :distant-foreground ,bg :extend t))))
 
 ;;;; imenu-list
    `(imenu-list-entry-face-0 ((,class (:foreground ,orange))))
@@ -818,7 +844,7 @@
    `(ivy-current-match ((,class (:background ,mariana3 :distant-foreground nil :extend t))))
    `(ivy-highlight-face ((,class (:foreground ,magenta))))
    `(ivy-match-required-face ((,class (:foreground ,red))))
-   `(ivy-minibuffer-match-face-1 ((,class (:background nil :foreground ,orange :weight bold :underline t))))
+   `(ivy-minibuffer-match-face-1 ((,class (:background unspecified :foreground ,orange :weight bold :underline t))))
    `(ivy-minibuffer-match-face-2 ((,class (:foreground ,orange :background ,mariana0 :weight semi-bold))))
    `(ivy-minibuffer-match-face-3 ((,class (:foreground ,blue :weight semi-bold))))
    `(ivy-minibuffer-match-face-4 ((,class (:foreground ,yellow :weight semi-bold))))
@@ -1034,7 +1060,7 @@
    `(mmm-code-submode-face ((,class (:background ,bg-other))))
    `(mmm-comment-submode-face ((,class (:background ,blue))))
    `(mmm-declaration-submode-face ((,class (:background ,cyan))))
-   `(mmm-default-submode-face ((,class (:background nil))))
+   `(mmm-default-submode-face ((,class (:background unspecified))))
    `(mmm-init-submode-face ((,class (:background ,red))))
    `(mmm-output-submode-face ((,class (:background ,magenta))))
    `(mmm-special-submode-face ((,class (:background ,green))))
@@ -1104,7 +1130,7 @@
    `(nlinum-relative-current-face ((,class (:foreground ,fg))))
 
 ;;;; notmuch
-   `(notmuch-message-summary-face ((,class (:foreground ,grey :background nil))))
+   `(notmuch-message-summary-face ((,class (:foreground ,grey :background unspecified))))
    `(notmuch-search-count ((,class (:foreground ,mariana5))))
    `(notmuch-search-date ((,class (:foreground ,orange))))
    `(notmuch-search-flagged-face ((,class (:foreground ,red))))
@@ -1188,7 +1214,7 @@
    `(org-document-info ((,class (:foreground ,orange))))
    `(org-document-title ((,class (:foreground ,orange :weight bold))))
    `(org-done ((,class (:foreground ,mariana5))))
-   `(org-ellipsis ((,class (:underline nil :background nil :foreground ,grey))))
+   `(org-ellipsis ((,class (:underline nil :background unspecified :foreground ,grey))))
    `(org-footnote ((,class (:foreground ,orange))))
    `(org-formula ((,class (:foreground ,cyan))))
    `(org-headline-done ((,class (:foreground ,mariana5))))
@@ -1550,11 +1576,6 @@
 
 ;;;; yasnippet
    `(yas-field-highlight-face ((,class (:foreground ,green :background ,mariana0 :weight bold))))
-
-   (custom-theme-set-variables
-    'mariana
-    ;; `(ansi-color-names-vector [bg, red, green, teal, cyan, blue, yellow, fg]))))
-    `(ansi-color-names-vector [bg, orange, green, purple, blue, magenta, cyan, fg]))))
 
 ;;;###autoload
 (when load-file-name
