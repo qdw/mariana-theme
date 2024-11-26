@@ -50,10 +50,15 @@
 (deftheme mariana
   "Custom theme inspired by the Mariana theme in Sublime Text 4.")
 
-(let ((class '((class color) (min-colors 89)))
-      (bg         "#343d46")
-      (bg-org     "#282d37")
-      (bg-other   "#232830")
+(let* ((class '((class color) (min-colors 89)))
+      ;; (bg         "#343d46")
+      ;; (bg         "#353d46") ;; Sublime text unfocused pane
+      (bg         "#303841")
+      
+      ;; (bg-org     "#282d37")
+      (bg-org bg)
+      ;; (bg-other   "#232830")
+      (bg-other bg) 
       (mariana0 "#343d46")
       (mariana1 "#1c1f24")
       (mariana2 "#4e5a65")
@@ -63,8 +68,12 @@
       (mariana6 "#73797e")
       (mariana7 "#9ca0a4")
       (mariana8 "#dfdfdf")
-      (fg         "#f7f7f7")
-      (fg-other   "#f7f7f7")
+
+      ;; (fg         "#f7f7f7")
+      (fg mariana5)
+      ;; (fg-other   "#f7f7f7")
+      (fg-other mariana5)
+      
       (grey       "#4f5b66")
       (red        "#ec5f66")
       (orange     "#f9ae58")
@@ -109,8 +118,11 @@
    `(warning ((,class (:foreground ,yellow))))
 
 ;;;; font-lock
-   `(font-lock-builtin-face ((,class (:foreground ,orange))))   `(font-lock-comment-delimiter-face ((,class (:foreground ,mariana5))))
-   `(font-lock-comment-face ((,class (:foreground ,mariana5 :slant italic))))
+   `(font-lock-builtin-face ((,class (:foreground ,orange))))
+   ;; `(font-lock-comment-delimiter-face ((,class (:foreground ,mariana5))))
+   ;; `(font-lock-comment-delimiter-face ((,class (:foreground ,purple))))   
+   ;; `(font-lock-comment-face ((,class (:foreground ,mariana5 :slant italic))))
+   `(font-lock-comment-face ((,class (:foreground ,purple :slant italic))))
    `(font-lock-constant-face ((,class (:foreground ,magenta))))
    `(font-lock-doc-face ((,class (:foreground ,mariana5 :slant italic))))
    `(font-lock-function-name-face ((,class (:foreground ,teal))))
@@ -1305,8 +1317,11 @@
 
 ;;;; show-paren
    ;; `(show-paren-match ((,class (:foreground ,red :background ,mariana0 :weight ultra-bold))))
-   `(show-paren-match ((,class (:underline (:color ,orange) :weight bold))))
+   ;; `(show-paren-match ((,class (:underline (:color ,orange) :weight bold))))
+   ;; `(show-paren-mismatch ((,class (:foreground ,mariana0 :background ,red :weight ultra-bold))))
+   `(show-paren-match ((,class (:background ,darkblue :weight bold))))
    `(show-paren-mismatch ((,class (:foreground ,mariana0 :background ,red :weight ultra-bold))))
+   
 
 ;;;; smart-mode-line
    `(sml/charging ((,class (:foreground ,green))))
@@ -1538,7 +1553,8 @@
 
    (custom-theme-set-variables
     'mariana
-    `(ansi-color-names-vector [bg, red, green, teal, cyan, blue, yellow, fg]))))
+    ;; `(ansi-color-names-vector [bg, red, green, teal, cyan, blue, yellow, fg]))))
+    `(ansi-color-names-vector [bg, orange, green, purple, blue, magenta, cyan, fg]))))
 
 ;;;###autoload
 (when load-file-name
