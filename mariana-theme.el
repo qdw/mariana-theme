@@ -53,7 +53,7 @@
 (let* ((class '((class color) (min-colors 89)))
       ;; (bg         "#343d46")
       ;; (bg         "#353d46") ;; Sublime text unfocused pane
-      (bg         "#303841")
+      (bg       "#303841")
       
       ;; (bg-org     "#282d37")
       (bg-org bg)
@@ -70,9 +70,9 @@
       (mariana8 "#dfdfdf")
 
       ;; (fg         "#f7f7f7")
-      (fg mariana5)
+      (fg mariana7)
       ;; (fg-other   "#f7f7f7")
-      (fg-other mariana5)
+      (fg-other mariana4)
       
       (grey       "#4f5b66")
       (red        "#ec5f66")
@@ -122,7 +122,7 @@
    ;; `(font-lock-comment-delimiter-face ((,class (:foreground ,mariana5))))
    ;; `(font-lock-comment-delimiter-face ((,class (:foreground ,purple))))   
    ;; `(font-lock-comment-face ((,class (:foreground ,mariana5 :slant italic))))
-   `(font-lock-comment-face ((,class (:foreground ,purple :slant italic))))
+   `(font-lock-comment-face ((,class (:foreground ,mariana3 :slant italic))))
    `(font-lock-constant-face ((,class (:foreground ,magenta))))
    `(font-lock-doc-face ((,class (:foreground ,mariana5 :slant italic))))
    `(font-lock-function-name-face ((,class (:foreground ,teal))))
@@ -133,7 +133,7 @@
    `(font-lock-regexp-grouping-backslash ((,class (:foreground ,fg :weight bold))))
    `(font-lock-regexp-grouping-construct ((,class (:foreground ,fg :weight bold))))
    `(font-lock-string-face ((,class (:foreground ,green))))
-   `(font-lock-type-face ((,class (:foreground ,yellow))))
+   `(font-lock-type-face ((,class (:foreground ,purple))))
    `(font-lock-variable-name-face ((,class (:foreground ,orange))))
    `(font-lock-warning-face ((,class (:foreground ,yellow))))
 
@@ -380,17 +380,17 @@
    `(compilation-error ((,class (:foreground ,red :weight bold))))
    `(compilation-info ((,class (:foreground ,green))))
    `(compilation-line-number ((,class (:foreground ,orange))))
-   `(compilation-mode-line-exit ((,class (:foreground ,green))))
-   `(compilation-mode-line-fail ((,class (:foreground ,red :weight bold))))
+   `(compilation-mode-line-exit ((,class (:foreground ,mariana5))))
+   `(compilation-mode-line-fail ((,class (:foreground ,orange :weight bold))))
    `(compilation-warning ((,class (:foreground ,yellow :slant italic))))
 
 ;;;; counsel
    `(counsel-variable-documentation ((,class (:foreground ,blue))))
 
 ;;;; cperl
-   `(cperl-array-face ((,class (:weight bold :foreground ,red))))
-   `(cperl-hash-face ((,class (:weight bold :slant italic :foreground ,red))))
-   `(cperl-nonoverridable-face ((,class (:foreground ,orange))))
+   `(cperl-array-face ((,class (:weight bold :foreground ,orange))))
+   `(cperl-hash-face ((,class (:weight bold :slant italic :foreground ,orange))))
+   `(cperl-nonoverridable-face ((,class (:foreground ,red))))
 
 ;;;; custom
    `(custom-button ((,class (:foreground ,fg :background ,bg-other :box (:line-width 3 :style released-button)))))
@@ -890,10 +890,10 @@
    `(jdee-font-lock-public-face ((,class (:foreground ,magenta))))
 
 ;;;; js2-mode
-   `(js2-external-variable ((,class (:foreground ,fg))))
+   `(js2-external-variable ((,class (:foreground ,mariana3))))
    `(js2-function-call ((,class (:foreground ,blue))))
    `(js2-function-param ((,class (:foreground ,red))))
-   `(js2-jsdoc-tag ((,class (:foreground ,mariana5))))
+   `(js2-jsdoc-tag ((,class (:foreground ,mariana3))))
    `(js2-object-property ((,class (:foreground ,magenta))))
 
 ;;;; keycast
@@ -1066,11 +1066,11 @@
    `(mmm-special-submode-face ((,class (:background ,green))))
 
 ;;;; mode-line
-   `(mode-line ((,class (:background ,bg-other :foreground ,fg :distant-foreground ,bg))))
+   `(mode-line ((,class (:background ,darkcyan :foreground ,grey :distant-foreground ,fg))))
    `(mode-line-buffer-id ((,class (:weight bold))))
-   `(mode-line-emphasis ((,class (:foreground ,orange :distant-foreground ,bg))))
-   `(mode-line-highlight ((,class (:foreground ,magenta :weight bold :underline ,darkcyan))))
-   `(mode-line-inactive ((,class (:background ,bg-other :foreground ,mariana5 :distant-foreground ,bg-other))))
+   `(mode-line-emphasis ((,class (:foreground ,magenta :distant-foreground ,magenta))))
+   `(mode-line-highlight ((,class (:foreground ,cyan :weight bold :underline ,darkcyan))))
+   `(mode-line-inactive ((,class (:background ,grey :foreground ,darkcyan :distant-foreground ,darkcyan))))
 
 ;;;; mu4e
    `(mu4e-forwarded-face ((,class (:foreground ,orange))))
@@ -1477,8 +1477,8 @@
    `(treemacs-tags-face ((,class (:foreground ,orange))))
 
 ;;;; typescript-mode
-   `(typescript-jsdoc-tag ((,class (:foreground ,mariana5))))
-   `(typescript-jsdoc-type ((,class (:foreground ,mariana5))))
+   `(typescript-jsdoc-tag ((,class (:foreground ,cyan))))
+   `(typescript-jsdoc-type ((,class (:foreground ,green))))
    `(typescript-jsdoc-value ((,class (:foreground ,mariana5))))
 
 ;;;; undo-tree
