@@ -623,12 +623,15 @@
    `(flx-highlight-face ((,class (:weight bold :foreground ,yellow :underline nil))))
 
 ;;;; flycheck
-   `(flycheck-error ((,class (:underline (:style wave :color ,red)))))
+   ;; `(flycheck-error ((,class (:underline (:style wave :color ,red)))))
+   `(flycheck-error ((,class (:weight bold :foreground ,red :underline nil))))
    `(flycheck-fringe-error ((,class (:foreground ,red))))
    `(flycheck-fringe-info ((,class (:foreground ,green))))
    `(flycheck-fringe-warning ((,class (:foreground ,yellow))))
-   `(flycheck-info ((,class (:underline (:style wave :color ,green)))))
-   `(flycheck-warning ((,class (:underline (:style wave :color ,yellow)))))
+   `(flycheck-fringe-warning ((,class (:foreground ,cyan))))
+   ;; `(flycheck-info ((,class (:underline (:style wave :color ,green)))))
+   ;; `(flycheck-warning ((,class (:underline (:style wave :color ,yellow)))))
+   `(flycheck-warning ((,class (:underline (:style wave :color ,cyan)))))
 
 ;;;; flycheck-posframe
    `(flycheck-posframe-background-face ((,class (:background ,bg-other))))
