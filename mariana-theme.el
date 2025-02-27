@@ -111,8 +111,9 @@
 ;;;; font-lock
    `(font-lock-builtin-face ((,class (:foreground ,orange))))
    `(font-lock-comment-delimiter-face ((,class (:foreground ,purple :background ,bg))))
-   ;; `(font-lock-comment-delimiter-face ((,class (:foreground ,mariana6 :background ,bg))))
-   `(font-lock-comment-face ((,class (:foreground ,bg :background ,mariana6 :slant italic :inherit default))))
+   `(font-lock-comment-face ((,class (:foreground ,mariana6 :background ,bg :slant italic :inherit default))))
+   ;; `(font-lock-comment-face ((,class (:foreground ,purple :background ,bg :slant italic :inherit default))))
+   
    `(font-lock-constant-face ((,class (:foreground ,magenta))))
    `(font-lock-doc-face ((,class (:foreground ,mariana5 :slant italic))))
    `(font-lock-function-name-face ((,class (:foreground ,teal))))
