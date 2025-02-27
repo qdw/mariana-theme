@@ -228,7 +228,7 @@
 ;;;; ANSI colors (used in shell-mode)
    
    `(ansi-color-black ((t (:background ,bg :foreground ,bg :underline nil))))
-   `(ansi-color-bright-black ((t (:background ,bg :foreground ,bg :underline nil))))
+   `(ansi-color-bright-black ((t (:background ,bg :foreground ,mariana3 :underline nil))))
    
    `(ansi-color-red ((t (:background ,orange :foreground ,orange :underline nil))))
    `(ansi-color-bright-red ((t (:background ,orange :foreground ,orange :underline nil))))
