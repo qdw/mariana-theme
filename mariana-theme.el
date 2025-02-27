@@ -51,14 +51,9 @@
   "Custom theme inspired by the Mariana theme in Sublime Text 4.")
 
 (let* ((class '((class color) (min-colors 89)))
-      ;; (bg         "#343d46")
-      ;; (bg         "#353d46") ;; Sublime text unfocused pane
       (bg       "#303841")
-      
-      ;; (bg-org     "#282d37")
-      (bg-org bg)
-      ;; (bg-other   "#232830")
-      (bg-other bg) 
+      (bg-org   "#141414")
+      (bg-other bg)
       (mariana0 "#343d46")
       (mariana1 "#1c1f24")
       (mariana2 "#4e5a65")
@@ -68,12 +63,8 @@
       (mariana6 "#73797e")
       (mariana7 "#9ca0a4")
       (mariana8 "#dfdfdf")
-
-      ;; (fg         "#f7f7f7")
       (fg mariana7)
-      ;; (fg-other   "#f7f7f7")
       (fg-other mariana4)
-      
       (grey       "#4f5b66")
       (red        "#ec5f66")
       (orange     "#f9ae58")
@@ -108,7 +99,7 @@
    `(match ((,class (:foreground ,green :background ,mariana0 :weight bold))))
    `(minibuffer-prompt ((,class (:foreground ,teal))))
    `(nobreak-space ((,class (:background ,bg :foreground ,fg :underline nil))))
-   `(region ((,class (:background ,blue :foreground unspecified :distant-foreground ,bg :extend t))))
+   `(region ((,class (:background ,darkblue :foreground unspecified :distant-foreground ,bg :extend t))))
    `(secondary-selection ((,class (:background ,grey :extend t))))
    `(shadow ((,class (:foreground ,mariana5))))
    `(success ((,class (:foreground ,green))))
@@ -119,10 +110,9 @@
 
 ;;;; font-lock
    `(font-lock-builtin-face ((,class (:foreground ,orange))))
-   ;; `(font-lock-comment-delimiter-face ((,class (:foreground ,mariana5))))
-   ;; `(font-lock-comment-delimiter-face ((,class (:foreground ,purple))))   
-   ;; `(font-lock-comment-face ((,class (:foreground ,mariana5 :slant italic))))
-   `(font-lock-comment-face ((,class (:foreground ,mariana3 :slant italic))))
+   `(font-lock-comment-delimiter-face ((,class (:foreground ,purple :background ,bg))))
+   ;; `(font-lock-comment-delimiter-face ((,class (:foreground ,mariana6 :background ,bg))))
+   `(font-lock-comment-face ((,class (:foreground ,bg :background ,mariana6 :slant italic :inherit default))))
    `(font-lock-constant-face ((,class (:foreground ,magenta))))
    `(font-lock-doc-face ((,class (:foreground ,mariana5 :slant italic))))
    `(font-lock-function-name-face ((,class (:foreground ,teal))))
