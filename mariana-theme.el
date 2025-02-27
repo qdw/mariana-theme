@@ -108,7 +108,7 @@
    `(match ((,class (:foreground ,green :background ,mariana0 :weight bold))))
    `(minibuffer-prompt ((,class (:foreground ,teal))))
    `(nobreak-space ((,class (:background ,bg :foreground ,fg :underline nil))))
-   `(region ((,class (:background ,grey :foreground unspecified :distant-foreground ,bg :extend t))))
+   `(region ((,class (:background ,blue :foreground unspecified :distant-foreground ,bg :extend t))))
    `(secondary-selection ((,class (:background ,grey :extend t))))
    `(shadow ((,class (:foreground ,mariana5))))
    `(success ((,class (:foreground ,green))))
